@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import DataDogRumHelper from './shared/data-log-rum';
 import { TestComponent } from './components/test/test.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ErrorPageTestComponent } from './components/error-page-test/error-page-test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    ErrorPageTestComponent
   ],
   imports: [
     BrowserModule,

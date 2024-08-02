@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import DataDogRUMHelper from 'src/app/shared/data-log-rum';
 
 @Component({
   selector: 'app-test',
@@ -14,6 +15,7 @@ export class TestComponent implements OnInit {
 
   async testDelayFunction(): Promise<void> {
     await new Promise( resolve => setTimeout(resolve, 5000) );
+    DataDogRUMHelper.setUser();
     alert("Done");
   }
 }

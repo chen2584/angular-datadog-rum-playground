@@ -15,10 +15,20 @@ export default class DataDogRUMHelper {
             // version: '1.0.0', 
             sessionSampleRate: 100,
             sessionReplaySampleRate: 20,
-            trackUserInteractions: true,
+            trackUserInteractions: false,
             trackResources: true,
             trackLongTasks: true,
             defaultPrivacyLevel: 'mask-user-input',
+            version: 'v2',
+        });
+    }
+
+    public static setUser() {
+        datadogRum.setUser({
+            id: '1234',
+            name: 'John Doe',
+            email: 'john@doe.com',
+            plan: 'premium',
         });
     }
 }
